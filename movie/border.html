@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <script src="videojs-contrib-hls.min.js"></script> -->
+<link href="https://cdn.bootcss.com/video.js/6.3.3/video-js.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/video.js/6.3.3/video.min.js"></script>
+<script src="https://cdn.bootcss.com/videojs-contrib-hls/5.11.0/videojs-contrib-hls.js"></script>
+<title>鼠标移入下划线展开</title>
+<style type="text/css">
+    #underline{
+        width: 200px;
+        height: 50px;
+        background: #ddd;
+        margin: 20px;
+        position: relative;
+    }
+    #underline:after{
+        content: "";
+        width: 0;
+        height: 5px;
+        background: blue;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transition: all .8s;
+    }
+    #underline:hover:after{
+        left: 0%;
+        width: 100%;
+    }
+    .border {
+        margin-left: 100px;
+        width: 50px;
+        height: 50px;
+        border: 40px solid;
+        border-color: orange blue red green;
+    }
+    .border1 {
+        margin: 100px;
+        width: 0;
+        height: 0;
+        border: 40px solid;
+        border-color: orange blue red green;
+    }
+    .border2 {
+        margin: 100px;
+        width: 0;
+        height: 0;
+        border: 40px solid;
+        border-color: transparent blue transparent transparent;
+    }
+</style>
+</head>
+<body> 
+    <div id="underline"></div>
+    <div class="border"></div>
+    <div class="border1"></div>
+    <div class="border2"></div>
+    <video id=example-video width=960 height=540 class="video-js vjs-default-skin" controls>
+        <source
+            src="https://youku.cdn7-okzy.com/20191126/15946_b6e68816/index.m3u8"
+            type="application/x-mpegURL">
+        </video>
+        <script>
+        var player = videojs('example-video');
+        player.play();
+        </script>
+</body>
+</html>
