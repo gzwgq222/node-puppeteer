@@ -14,7 +14,7 @@ const config = {
         height: 768,
     }
 };
-
+// 17109324205 1111aaaa
 puppeteer.launch(config).then(async browser => {
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36');
