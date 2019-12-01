@@ -52,3 +52,4 @@ const puppeteer = require('puppeteer');
 
   browser.close();
 })();
+
